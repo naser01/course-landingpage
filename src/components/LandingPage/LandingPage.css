@@ -1,0 +1,200 @@
+/* landing-page.css */
+
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.landing-page.rtl {
+  direction: rtl;
+}
+
+/* Header Styles */
+.landing-page__header {
+  background-color: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.landing-page__header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.landing-page__logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.landing-page__language-button {
+  margin-left: 16px;
+}
+
+/* Main Content Styles */
+.landing-page__main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.landing-page__main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.landing-page__title {
+  font-size: 48px !important;
+  font-weight: bold !important;
+  margin-bottom: 24px !important;
+  color: #1a1a1a;
+  width: 100%;
+}
+
+.landing-page__subtitle {
+  font-size: 24px !important;
+  color: #666666 !important;
+  margin-bottom: 48px !important;
+  font-weight: normal !important;
+  width: 100%;
+}
+
+/* Video Section */
+.landing-page__video {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin: 48px auto;
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16/9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.landing-page__video:hover {
+  background-color: #eeeeee;
+}
+
+.landing-page__video-icon {
+  font-size: 64px !important;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.landing-page__video-text {
+  color: #666666;
+}
+
+/* Sign Up Button */
+.landing-page__signup {
+  padding: 12px 32px !important;
+  font-size: 18px !important;
+  text-transform: none !important;
+}
+
+/* Form Styles */
+.landing-page__form {
+  padding: 24px;
+  min-width: 400px;
+}
+
+.landing-page__form-title {
+  font-size: 24px !important;
+  font-weight: bold !important;
+  margin-bottom: 24px !important;
+  text-align: center;
+}
+
+.landing-page__form-field {
+  margin-bottom: 16px !important;
+  width: 100%;
+}
+
+.landing-page__form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.landing-page__success {
+  padding: 24px;
+  text-align: center;
+}
+
+.landing-page__error {
+  margin-top: 16px;
+}
+
+.landing-page__loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 24px;
+}
+
+/* RTL Specific Styles */
+.rtl .landing-page__language-button {
+  margin-right: 16px;
+  margin-left: 0;
+}
+
+.rtl .landing-page__form-actions {
+  flex-direction: row-reverse;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .landing-page__title {
+    font-size: 36px !important;
+  }
+
+  .landing-page__subtitle {
+    font-size: 20px !important;
+  }
+
+  .landing-page__form {
+    min-width: 300px;
+  }
+
+  .landing-page__signup {
+    padding: 10px 24px !important;
+    font-size: 16px !important;
+  }
+
+  .landing-page__header-content {
+    padding: 12px 16px;
+  }
+
+  .landing-page__main {
+    padding: 32px 16px;
+  }
+}
+
+/* Material UI Dialog Override */
+@media (max-width: 600px) {
+  .MuiDialog-paper {
+    margin: 16px !important;
+  }
+}
+
+/* Arabic Font Support */
+.rtl .MuiTypography-root,
+.rtl .MuiButton-root,
+.rtl .MuiTextField-root {
+  font-family: "Arial", sans-serif;
+}
