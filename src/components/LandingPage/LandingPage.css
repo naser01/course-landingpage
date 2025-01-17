@@ -217,7 +217,7 @@
 }
 
 .logo_size {
-  height: 150px;
+  height: 80px;
 }
 
 /* Responsive Styles */
@@ -247,5 +247,8 @@
   .landing-page__signup {
     padding: 12px 24px !important;
     font-size: 18px !important;
+  }
+
+  landing-page__header-content {
   }
 }
