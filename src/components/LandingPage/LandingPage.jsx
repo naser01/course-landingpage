@@ -155,6 +155,7 @@ const LandingPage = () => {
               <img className="logo_size" src={logo} alt="logo" />
             </div>
             <IconButton
+              disableRipple
               className="landing-page__language-button"
               onClick={() =>
                 setLanguage((lang) => (lang === "en" ? "ar" : "en"))

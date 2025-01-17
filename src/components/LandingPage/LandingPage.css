@@ -46,7 +46,7 @@
 .landing-page__header {
   background-color: transparent;
   width: 100%;
-  padding: 16px 0;
+  padding: 16px 0 0 0;
 }
 
 .landing-page__header-content {
@@ -66,9 +66,27 @@
   color: white;
 }
 
-.landing-page__language-button {
-  margin-left: 16px;
+.landing-page__language-button.MuiButtonBase-root {
   color: white !important;
+  background-color: transparent !important;
+}
+
+.landing-page__language-button.MuiButtonBase-root:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.landing-page__language-button.MuiButtonBase-root.Mui-focusVisible {
+  background-color: transparent !important;
+}
+
+.landing-page__language-button.MuiButtonBase-root .MuiTouchRipple-root {
+  display: none;
+}
+
+.landing-page__language-button svg {
+  width: 24px;
+  height: 24px;
+  color: white;
 }
 
 /* Main Content Styles */
@@ -76,7 +94,8 @@
   flex: 1;
   width: 100%;
   box-sizing: border-box;
-  padding: 48px 24px;
+  padding: 20px 24px;
+  padding-bottom: 48;
   text-align: center;
   background-color: #004aad;
 }
