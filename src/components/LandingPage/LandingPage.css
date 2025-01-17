@@ -1,74 +1,3 @@
-/* landing-page.css */
-
-.landing-page {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.landing-page.rtl {
-  direction: rtl;
-}
-
-/* Header Styles */
-.landing-page__header {
-  background-color: #ffffff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  width: 100%;
-}
-
-.landing-page__header-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.landing-page__logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.landing-page__language-button {
-  margin-left: 16px;
-}
-
-/* Main Content Styles */
-.landing-page__main {
-  flex: 1;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 48px 24px;
-  text-align: center;
-}
-
-.landing-page__main-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.landing-page__title {
-  font-size: 48px !important;
-  font-weight: bold !important;
-  margin-bottom: 24px !important;
-  color: #1a1a1a;
-  width: 100%;
-}
-
-.landing-page__subtitle {
-  font-size: 24px !important;
-  color: #666666 !important;
-  margin-bottom: 48px !important;
-  font-weight: normal !important;
-  width: 100%;
-}
-
 /* Video Section */
 .landing-page__video {
   background-color: #f5f5f5;
@@ -99,102 +28,224 @@
   color: #666666;
 }
 
-/* Sign Up Button */
-.landing-page__signup {
-  padding: 12px 32px !important;
-  font-size: 18px !important;
-  text-transform: none !important;
+/* landing-page.css */
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #004aad;
+  color: white;
 }
 
-/* Form Styles */
-.landing-page__form {
-  padding: 24px;
-  min-width: 400px;
+.landing-page.rtl {
+  direction: rtl;
 }
 
-.landing-page__form-title {
-  font-size: 24px !important;
-  font-weight: bold !important;
-  margin-bottom: 24px !important;
+/* Header Styles */
+.landing-page__header {
+  background-color: transparent;
+  width: 100%;
+  padding: 16px 0;
+}
+
+.landing-page__header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.landing-page__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.landing-page__language-button {
+  margin-left: 16px;
+  color: white !important;
+}
+
+/* Main Content Styles */
+.landing-page__main {
+  flex: 1;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 48px 24px;
   text-align: center;
+  background-color: #004aad;
 }
 
-.landing-page__form-field {
-  margin-bottom: 16px !important;
+.landing-page__main-content {
+  max-width: 800px;
+  margin: 0 auto;
   width: 100%;
 }
 
-.landing-page__form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 12px;
-  margin-top: 24px;
+.landing-page__title {
+  font-size: 42px !important;
+  font-weight: bold !important;
+  margin-bottom: 24px !important;
+  color: #f8d74f !important;
+  width: 100%;
 }
 
-.landing-page__success {
+.landing-page__subtitle {
+  font-size: 20px !important;
+  color: white !important;
+  margin-bottom: 32px !important;
+  line-height: 1.6 !important;
+}
+
+.landing-page__main-cta {
+  font-size: 18px !important;
+  color: white !important;
+  margin-bottom: 48px !important;
+  line-height: 1.6 !important;
+}
+
+/* Benefits Section */
+.landing-page__benefits {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 32px;
+  border-radius: 16px;
+  margin: 48px 0;
+}
+
+.landing-page__benefits-title {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: #f8d74f !important;
+  margin-bottom: 24px !important;
+}
+
+.landing-page__benefits-list {
+  text-align: left;
+}
+
+.rtl .landing-page__benefits-list {
+  text-align: right;
+}
+
+.landing-page__benefit-item {
+  font-size: 18px !important;
+  color: white !important;
+  margin-bottom: 16px !important;
+  line-height: 1.6 !important;
+}
+
+.landing-page__call-to-action {
+  font-size: 20px !important;
+  color: white !important;
+  margin: 32px 0 !important;
+  line-height: 1.6 !important;
+}
+
+/* Sign Up Button */
+.landing-page__signup {
+  padding: 16px 40px !important;
+  font-size: 20px !important;
+  text-transform: none !important;
+  background-color: #f8d74f !important;
+  color: #004aad !important;
+  margin: 24px 0 !important;
+}
+
+.landing-page__signup:hover {
+  background-color: #f9de6f !important;
+}
+
+.landing-page__spam-notice {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin-top: 16px !important;
+}
+
+/* Form Styles */
+.landing-page__dialog .MuiPaper-root {
+  background-color: #004aad;
+  color: white;
+  padding: 16px;
+}
+
+.landing-page__form {
   padding: 24px;
+  min-width: 400px;
+  background-color: #004aad;
+}
+
+.landing-page__form-title {
+  font-size: 28px !important;
+  font-weight: bold !important;
+  margin-bottom: 24px !important;
   text-align: center;
+  color: #f8d74f !important;
 }
 
-.landing-page__error {
-  margin-top: 16px;
+.landing-page__form-field {
+  margin-bottom: 24px !important;
+  width: 100%;
 }
 
-.landing-page__loading {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 24px;
+.landing-page__form-field .MuiInputLabel-root,
+.landing-page__form-field .MuiOutlinedInput-root {
+  color: white;
 }
 
-/* RTL Specific Styles */
-.rtl .landing-page__language-button {
-  margin-right: 16px;
-  margin-left: 0;
+.landing-page__form-field .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
-.rtl .landing-page__form-actions {
-  flex-direction: row-reverse;
+.landing-page__form-field:hover .MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.landing-page__submit {
+  background-color: #f8d74f !important;
+  color: #004aad !important;
+  padding: 12px !important;
+  font-size: 18px !important;
+}
+
+.landing-page__submit:hover {
+  background-color: #f9de6f !important;
+}
+
+.logo_size {
+  height: 150px;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .landing-page__title {
-    font-size: 36px !important;
+    font-size: 32px !important;
   }
 
-  .landing-page__subtitle {
-    font-size: 20px !important;
+  .landing-page__subtitle,
+  .landing-page__main-cta {
+    font-size: 18px !important;
+  }
+
+  .landing-page__benefits-title {
+    font-size: 24px !important;
+  }
+
+  .landing-page__benefit-item {
+    font-size: 16px !important;
   }
 
   .landing-page__form {
     min-width: 300px;
+    padding: 16px;
   }
 
   .landing-page__signup {
-    padding: 10px 24px !important;
-    font-size: 16px !important;
+    padding: 12px 24px !important;
+    font-size: 18px !important;
   }
-
-  .landing-page__header-content {
-    padding: 12px 16px;
-  }
-
-  .landing-page__main {
-    padding: 32px 16px;
-  }
-}
-
-/* Material UI Dialog Override */
-@media (max-width: 600px) {
-  .MuiDialog-paper {
-    margin: 16px !important;
-  }
-}
-
-/* Arabic Font Support */
-.rtl .MuiTypography-root,
-.rtl .MuiButton-root,
-.rtl .MuiTextField-root {
-  font-family: "Arial", sans-serif;
 }

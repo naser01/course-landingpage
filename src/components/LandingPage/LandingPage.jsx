@@ -15,37 +15,53 @@ import {
 } from "@mui/material";
 import { Language, PlayArrow } from "@mui/icons-material";
 import "./LandingPage.css";
+import logo from "./logo1.png";
 
 const translations = {
   en: {
-    title: "Transform Your Skills with Our Course",
-    subtitle: "Learn at your own pace and unlock your potential",
-    watchVideo: "Watch Course Preview",
-    signUp: "Sign Up Now",
-    fullName: "Full Name",
-    email: "Email",
-    submit: "Submit",
-    formTitle: "Join Our Course",
-    success: "Thank you for signing up!",
+    title:
+      "Get Notified When Our Google Search Ads Course in Arabic is Live! 📧",
+    subtitle:
+      "Are you ready to take your Google Search Ads skills to the next level? Our Google Search Ads Course will soon be available in Arabic, designed specifically for Arabic-speaking entrepreneurs and marketers!",
+    mainCta:
+      "Be the first to know when the course is available for purchase and start learning powerful Google Search Ads strategies in your language — with easy-to-follow, step-by-step guidance.",
+    benefitsTitle: "Why Join the Waitlist?",
+    benefits: [
+      "🔥 The course will be available in Arabic, making it easier for you to learn and apply the strategies to your business.",
+      "🚀 Get early access and special discounts when the course launches.",
+      "🎯 Master Google Search Ads with proven techniques that will boost your campaigns and drive results.",
+    ],
+    callToAction:
+      "Don't miss out! Sign up now to be among the first to access the course in Arabic and unlock the full potential of Google Search Ads.",
+    emailPrompt: "Enter Your Email to Get Notified First!",
+    email: "Email Address",
+    submit: "Notify Me",
+    formTitle: "Join The Waitlist",
+    success: "Thank you for joining the waitlist!",
     error: "An error occurred. Please try again.",
-    enterName: "Please enter your name",
-    enterEmail: "Please enter a valid email",
-    cancel: "Cancel",
+    spam: "No spam, we promise. Only valuable course updates and offers.",
   },
   ar: {
-    title: "طور مهاراتك مع دورتنا",
-    subtitle: "تعلم على وتيرتك الخاصة وأطلق العنان لإمكاناتك",
-    watchVideo: "شاهد معاينة الدورة",
-    signUp: "سجل الآن",
-    fullName: "الاسم الكامل",
+    title: "احصل على إشعار عند توافر دورة إعلانات جوجل باللغة العربية! 📧",
+    subtitle:
+      "هل أنت مستعد للارتقاء بمهاراتك في إعلانات جوجل؟ دورة إعلانات جوجل الخاصة بنا ستكون متاحة قريبًا باللغة العربية، تم تصميمها خصيصًا لأصحاب الأعمال والمسوقين الناطقين بالعربية!",
+    mainCta:
+      "كن أول من يعرف عندما تصبح الدورة متاحة للشراء وابدأ في تعلم استراتيجيات إعلانات جوجل الفعّالة بلغتك الأم — مع دليل سهل وواضح خطوة بخطوة.",
+    benefitsTitle: "لماذا يجب أن تنضم إلى قائمة الانتظار؟",
+    benefits: [
+      "🔥 الدورة ستكون باللغة العربية، مما يسهل عليك تعلم وتطبيق الاستراتيجيات على عملك.",
+      "🚀 احصل على الوصول المبكر وخصومات خاصة عند إطلاق الدورة.",
+      "🎯 تعلم استراتيجيات فعّالة لإعلانات جوجل تساعدك في تحسين حملاتك وتحقيق نتائج حقيقية.",
+    ],
+    callToAction:
+      "!لا تفوت الفرصة! اشترك الآن لتكون من أول من يحصل على الدورة باللغة العربية وتكتشف كيفية الاستفادة القصوى من إعلانات جوجل",
+    emailPrompt: "!أدخل بريدك الإلكتروني للحصول على إشعار عند الإطلاق",
     email: "البريد الإلكتروني",
-    submit: "إرسال",
-    formTitle: "انضم إلى دورتنا",
-    success: "شكراً لتسجيلك!",
+    submit: "أشعرني",
+    formTitle: "انضم إلى قائمة الانتظار",
+    success: "!شكراً لانضمامك إلى قائمة الانتظار",
     error: "حدث خطأ. يرجى المحاولة مرة أخرى.",
-    enterName: "الرجاء إدخال اسمك",
-    enterEmail: "الرجاء إدخال بريد إلكتروني صحيح",
-    cancel: "إلغاء",
+    spam: "لا يوجد رسائل غير مرغوب فيها، نعدك بذلك. فقط تحديثات وعروض الدورة القيمة.",
   },
 };
 
@@ -118,12 +134,26 @@ const LandingPage = () => {
   };
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider
+      theme={createTheme({
+        direction: isRTL ? "rtl" : "ltr",
+        palette: {
+          primary: {
+            main: "#004aad",
+          },
+          secondary: {
+            main: "#f8d74f",
+          },
+        },
+      })}
+    >
       <CssBaseline />
       <div className={`landing-page ${isRTL ? "rtl" : ""}`}>
         <header className="landing-page__header">
           <div className="landing-page__header-content">
-            <div className="landing-page__logo">Logo</div>
+            <div className="landing-page__logo">
+              <img className="logo_size" src={logo} alt="logo" />
+            </div>
             <IconButton
               className="landing-page__language-button"
               onClick={() =>
@@ -141,29 +171,59 @@ const LandingPage = () => {
               {t.title}
             </Typography>
 
-            <Typography component="h2" className="landing-page__subtitle">
+            <Typography className="landing-page__subtitle">
               {t.subtitle}
             </Typography>
-
             <div className="landing-page__video">
               <PlayArrow className="landing-page__video-icon" />
               <Typography className="landing-page__video-text">
                 {t.watchVideo}
               </Typography>
             </div>
+            <Typography className="landing-page__main-cta">
+              {t.mainCta}
+            </Typography>
+
+            <div className="landing-page__benefits">
+              <Typography
+                component="h2"
+                className="landing-page__benefits-title"
+              >
+                {t.benefitsTitle}
+              </Typography>
+              <div className="landing-page__benefits-list">
+                {t.benefits.map((benefit, index) => (
+                  <Typography
+                    key={index}
+                    className="landing-page__benefit-item"
+                  >
+                    {benefit}
+                  </Typography>
+                ))}
+              </div>
+            </div>
+
+            <Typography className="landing-page__call-to-action">
+              {t.callToAction}
+            </Typography>
 
             <Button
               variant="contained"
               onClick={() => setShowForm(true)}
               className="landing-page__signup"
             >
-              {t.signUp}
+              {t.emailPrompt}
             </Button>
+
+            <Typography className="landing-page__spam-notice">
+              {t.spam}
+            </Typography>
           </div>
 
           <Dialog
             open={showForm}
             onClose={() => !loading && setShowForm(false)}
+            className="landing-page__dialog"
           >
             <DialogContent className="landing-page__form">
               {status.success ? (
@@ -175,20 +235,6 @@ const LandingPage = () => {
                   <Typography className="landing-page__form-title">
                     {t.formTitle}
                   </Typography>
-
-                  <TextField
-                    className="landing-page__form-field"
-                    label={t.fullName}
-                    required
-                    value={formData.fullName}
-                    onChange={(e) =>
-                      setFormData((prev) => ({
-                        ...prev,
-                        fullName: e.target.value,
-                      }))
-                    }
-                    disabled={loading}
-                  />
 
                   <TextField
                     className="landing-page__form-field"
@@ -211,27 +257,21 @@ const LandingPage = () => {
                     </Alert>
                   )}
 
-                  <div className="landing-page__form-actions">
-                    <Button
-                      onClick={() => setShowForm(false)}
-                      disabled={loading}
-                    >
-                      {t.cancel}
-                    </Button>
-                    <Button
-                      type="submit"
-                      variant="contained"
-                      disabled={loading}
-                    >
-                      {loading ? (
-                        <div className="landing-page__loading">
-                          <CircularProgress size={24} />
-                        </div>
-                      ) : (
-                        t.submit
-                      )}
-                    </Button>
-                  </div>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    disabled={loading}
+                    fullWidth
+                    className="landing-page__submit"
+                  >
+                    {loading ? (
+                      <div className="landing-page__loading">
+                        <CircularProgress size={24} />
+                      </div>
+                    ) : (
+                      t.submit
+                    )}
+                  </Button>
                 </Box>
               )}
             </DialogContent>
